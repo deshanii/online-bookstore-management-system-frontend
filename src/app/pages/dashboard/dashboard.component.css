@@ -1,0 +1,62 @@
+
+.catagories{
+    text-align: center;
+} 
+
+.carousel-1{
+    background-image: url("https://images.pexels.com/photos/1122865/pexels-photo-1122865.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+    height: 600px;
+}
+
+.carousel-1 p{
+    font-size: 100px;
+    text-align: center;
+    font-style: unset;
+    color: aliceblue;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+    text-shadow: 2px 2px 5px rgb(31, 32, 32);
+    line-height: 1.2;
+    
+}
+
+.carousel-2{
+    background-image: url("https://img.freepik.com/free-vector/delivery-service-with-masks-concept_23-2148498491.jpg?t=st=1730882185~exp=1730885785~hmac=b4b3b3baa70512eb8c31a65aca46e91ff8bb000257e8232cee721acce434fe0d&w=1060");
+    height: 600px;
+}
+
+.carousel-2 p{
+    font-size: 80px;
+    text-align: center;
+    font-style: unset;
+    color: rgb(10, 10, 10);
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+    text-shadow: 2px 2px 5px rgb(31, 32, 32);
+    line-height: 1.2;
+    
+   
+}
+
+
+.carousel-3{
+    /* background-image: url("https://images.pexels.com/photos/4855385/pexels-photo-4855385.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"); */
+    background-image: url("https://images.pexels.com/photos/762686/pexels-photo-762686.jpeg?auto=compress&cs=tinysrgb&w=600");
+    height: 600px;
+}
+
+.carousel-3 p{
+    padding-top: 100px;
+    font-size: 30px;
+    padding-left: 40px;
+    padding-right: 40px;
+    line-height: 2.0;
+    
+}
+
+/* .about-us {
+    background-color: #D9C19D;
+    border-radius: 5px;
+} */
+
+
