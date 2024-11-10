@@ -9,11 +9,12 @@ import { AddBooksComponent } from './admin/add-books/add-books.component';
 import { ManageBooksComponent } from './admin/manage-books/manage-books.component';
 import { LoginComponent } from './pages/login/login.component';
 import { ContactComponent } from './pages/contact/contact.component';
+import { AdminNavBarComponent } from './admin/admin-nav-bar/admin-nav-bar.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet,NavBarComponent,DashboardComponent,AboutUsComponent,CatagoriesComponent,FooterComponent,AddBooksComponent,ManageBooksComponent,LoginComponent,ContactComponent],
+  imports: [RouterOutlet,NavBarComponent,DashboardComponent,AboutUsComponent,CatagoriesComponent,FooterComponent,AddBooksComponent,ManageBooksComponent,LoginComponent,ContactComponent,AdminNavBarComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

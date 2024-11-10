@@ -1,74 +1,17 @@
-<!-- <div class="modal" tabindex="-1">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title">Modal title</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
 
-            <div class="mb-3">
-                <label for="recipient-name" class="col-form-label">Book Name</label>
-                <input type="text" class="form-control"  id="recipient-name" placeholder="Enter Your Book Name">
-            </div>
 
-            <div class="mb-3">
-                <label for="recipient-name" class="col-form-label">Book Author</label>
-                <input type="text" class="form-control"  id="recipient-name" placeholder="Enter Your Book Author">
-            </div>
 
-            <div class="mb-3">
-                <label for="recipient-name" class="col-form-label">Book Price</label>
-                <input type="text" class="form-control"  id="recipient-name" placeholder="Price">
-            </div>
-
-            <div class="mb-3">
-                <label for="recipient-name" class="col-form-label">Book Quantity</label>
-                <input type="text" class="form-control"  id="recipient-name" placeholder="No Of Books">
-            </div>
-
-            <div class="mb-3">
-                <label for="recipient-name" class="col-form-label">Description</label>
-                <input type="text" class="form-control"  id="recipient-name" placeholder="Book Description">
-            </div>
-
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Save changes</button>
-        </div>
-      </div>
-    </div>
-  </div> -->
-
-<!-- <div class="modal" tabindex="-1">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title">Modal title</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <p>Modal body text goes here.</p>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Save changes</button>
-        </div>
-      </div>
-    </div>
-  </div> -->
-
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"
-    data-bs-whatever="mdo">Open modal for mdo</button>
-
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-xl">
+<!-- <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"> -->
+    <br>
+    <br>
+    <div class="modal-dialog modal-xl ">
         <div class="modal-content">
-            <div class="modal-header">
+
+            
+            <!-- <div class="modal-header">
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            
+             -->
             <div class="modal-body d-flex flex-wrap">
                 <!-- Form Section -->
                 <div class="form-section flex-grow-1 p-3">
@@ -76,25 +19,26 @@
                         <h1 class="text-center p-2">Add Books</h1>
                         <div class="mb-3">
                             <label for="book-name" class="col-form-label">Book Name:</label>
-                            <input type="text" class="form-control" id="book-name" placeholder="Enter Your Book Name">
+                            <input type="text" class="form-control" id="book-name" placeholder="Enter Your Book Name" [(ngModel)]="book.title" name="title">
+                        </div>
+                        
+                        <div class="mb-3 d-flex">
+                            <div class="me-3 flex-grow-1">
+                                <label for="book-price" class="col-form-label">Book Category:</label>
+                                <input type="text" class="form-control" id="book-price" placeholder="Category" [(ngModel)]="book.category" name="category">
+                            </div>
+                            <div class="flex-grow-1">
+                                <label for="book-price" class="col-form-label">Book Price:</label>
+                                <input type="text" class="form-control" id="book-price" placeholder="Price" [(ngModel)]="book.price" name="price">
+                            </div>
                         </div>
                         <div class="mb-3">
                             <label for="book-author" class="col-form-label">Book Author:</label>
-                            <input type="text" class="form-control" id="book-author" placeholder="Enter Your Book Author">
-                        </div>
-                        <div class="mb-3 d-flex">
-                            <div class="me-3 flex-grow-1">
-                                <label for="book-price" class="col-form-label">Book Price:</label>
-                                <input type="text" class="form-control" id="book-price" placeholder="Price">
-                            </div>
-                            <div class="flex-grow-1">
-                                <label for="book-quantity" class="col-form-label">Book Quantity:</label>
-                                <input type="text" class="form-control" id="book-quantity" placeholder="No Of Books">
-                            </div>
+                            <input type="text" class="form-control" id="book-author" placeholder="Enter Your Book Author" [(ngModel)]="book.author" name="author">
                         </div>
                         <div class="mb-3">
                             <label for="book-description" class="col-form-label">Book Description:</label>
-                            <textarea class="form-control" id="book-description" placeholder="Description"></textarea>
+                            <textarea class="form-control" id="book-description" placeholder="Description" [(ngModel)]="book.description" name="description"></textarea>
                         </div>
                     </form>
                 </div>
@@ -107,9 +51,13 @@
             </div>
             
             <div class="modal-footer">
-                <button type="button" class="btn btn-success">Add Book</button>
+                <button type="button" class="btn btn-success" (click)="addBook()">Add Book</button>
             </div>
         </div>
 
     </div>
-</div>
+    <h2>{{book.title}}</h2>
+
+<!-- </div> -->
+
+
