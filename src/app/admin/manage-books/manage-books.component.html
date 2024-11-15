@@ -24,8 +24,10 @@
                 <td>{{book.price}}</td>
                 <td>{{book.author}}</td>
                 <td>{{book.description}}</td>
-                <td><button class="btn btn-danger" (click)="deleteBookById(book.bookId)"><i class="bi bi-trash-fill"></i></button> &nbsp;
-                <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" (click)="updateBook(book)" ><i class="bi bi-pencil-square"></i></button></td>
+                <td>
+                    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" (click)="updateBook(book)" ><i class="bi bi-pencil-square"></i></button>
+                    <button class="btn btn-danger" (click)="deleteBookById(book.bookId)"><i class="bi bi-trash-fill"></i></button> &nbsp;
+                </td>
             </tr>
         </table>
     </div>

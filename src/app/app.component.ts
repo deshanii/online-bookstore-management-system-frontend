@@ -10,11 +10,29 @@ import { ManageBooksComponent } from './admin/manage-books/manage-books.componen
 import { LoginComponent } from './pages/login/login.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { AdminNavBarComponent } from './admin/admin-nav-bar/admin-nav-bar.component';
+import { SignupComponent } from './pages/signup/signup.component';
+import { AddCategoryComponent } from './admin/add-category/add-category.component';
+import { ManageCategoryComponent } from './admin/manage-category/manage-category.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet,NavBarComponent,DashboardComponent,AboutUsComponent,CatagoriesComponent,FooterComponent,AddBooksComponent,ManageBooksComponent,LoginComponent,ContactComponent,AdminNavBarComponent],
+  imports: [
+    RouterOutlet,
+    NavBarComponent,
+    DashboardComponent,
+    AboutUsComponent,
+    CatagoriesComponent,
+    FooterComponent,
+    AddBooksComponent,
+    ManageBooksComponent,
+    LoginComponent,
+    ContactComponent,
+    AdminNavBarComponent,
+    SignupComponent,
+    AddCategoryComponent,
+    ManageCategoryComponent
+  ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

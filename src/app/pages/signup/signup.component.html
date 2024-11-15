@@ -1,19 +1,19 @@
-<section class="vh-80" style="background-color: #9A616D;">
-    <div class="container">
+<section class="vh-100" style="background-color: #9d7b61;">
+    <div class="container py-5 h-100">
         <div class="row d-flex justify-content-center align-items-center">
             <div class="col col-xl-10">
                 <div class="p-5">
                     <div class="card" style="border-radius: 1rem;">
                         <div class="row g-0">
                             <div class="col-md-6 col-lg-5">
-                                <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/img1.webp"
-                                    alt="login form" class="img-fluid" height="50"
+                                <img src="https://img.freepik.com/free-photo/teen-schoolgirl-sitting-with-book-bench_23-2148204265.jpg?ga=GA1.1.1053612506.1715667318&semt=ais_hybrid"
+                                    alt="signup form" class="img-fluid" height="50"
                                     style="border-radius: 1rem 0 0 1rem;" />
                             </div>
                             <div class="col-md-6 col-lg-7 d-flex align-items-center">
                                 <div class="card-body p-lg-4 text-black">
 
-                                    <form class="">
+                                    <div class="">
 
                                         <div class="d-flex justify-content-center mb-3 pb-1">
                                             <i class="fas fa-cubes fa-2x me-3" style="color: #ff6219;"></i>
@@ -21,13 +21,22 @@
                                         </div>
 
                                         <h5 class="fw-normal mb-3 pb-3 text-center" style="letter-spacing: 1px;">Sign
-                                            into your account
+                                            upto your account
                                         </h5>
 
                                         <div data-mdb-input-init class="px-5 mb-4">
                                             <div class="">
+                                                <label class="form-label" for="form2Example17">Name</label>
+                                                <input type="text" [(ngModel)]="name" [ngModelOptions]="{standalone: true}" id="name"
+                                                    class="form-control form-control-lg" placeholder="admin" />
+                                            </div>
+                                            
+                                        </div>
+
+                                        <div data-mdb-input-init class="px-5 mb-4">
+                                            <div class="">
                                                 <label class="form-label" for="form2Example17">Email address</label>
-                                                <input type="email" id="form2Example17"
+                                                <input type="email" [(ngModel)]="email" [ngModelOptions]="{standalone: true}" id="email"
                                                     class="form-control form-control-lg" placeholder="example@gmail.com" />
                                             </div>
                                             
@@ -35,22 +44,18 @@
 
                                         <div data-mdb-input-init class="px-5 mb-4">
                                             <label class="form-label" for="form2Example27">Password</label>
-                                            <input type="password"  id="form2Example27"
+                                            <input type="password" [(ngModel)]="password" [ngModelOptions]="{standalone: true}" id="password"
                                                 class="form-control form-control-lg" placeholder="********"/>
                                            
                                         </div>
 
                                         <div class="px-5 mb-4 ">
                                             <button data-mdb-button-init data-mdb-ripple-init
-                                                class="btn btn-dark btn-lg btn-block "  type="button">Login</button>
+                                                class="btn btn-dark btn-lg btn-block "  type="button" (click)="save()">Register</button>
                                         </div>
 
-                                        <a class="px-5 small text-muted" href="#!">Forgot password?</a>
-                                        <p class="px-5 mt-2 pb-lg-2" style="color: #393f81;">Don't have an account? <a
-                                                href="#!" style="color: #393f81;">Register here</a></p>
-                                        <a href="#!" class="px-5 text-muted">Terms of use.</a>
-                                        <a href="#!" class="text-muted">Privacy policy</a>
-                                    </form>
+                                        
+                                    </div>
 
                                 </div>
                             </div>

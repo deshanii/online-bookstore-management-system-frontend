@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-add-books',
@@ -25,7 +26,11 @@ export class AddBooksComponent {
 
     this.http.post("http://localhost:8080/book/add-book",this.book).subscribe((data)=>{
   
-        alert("book added!!!");
+      Swal.fire({
+        title: "Book Added!",
+        text: "You clicked the button!",
+        icon: "success"
+      });
       
         
     })

@@ -5,16 +5,32 @@ import { LoginComponent } from './pages/login/login.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { AddBooksComponent } from './admin/add-books/add-books.component';
 import { ManageBooksComponent } from './admin/manage-books/manage-books.component';
+import { SignupComponent } from './pages/signup/signup.component';
+import { AdminNavBarComponent } from './admin/admin-nav-bar/admin-nav-bar.component';
+import { NavBarComponent } from './common/nav-bar/nav-bar.component';
+import { AddCategoryComponent } from './admin/add-category/add-category.component';
+import { ManageCategoryComponent } from './admin/manage-category/manage-category.component';
 
 export const routes: Routes = [
+   
     {
         path: "add-book",
         component: AddBooksComponent
     },
 
+
     {
         path: "manage-book",
         component: ManageBooksComponent
+    },
+    {
+        path: "add-category",
+        component: AddCategoryComponent
+    },
+
+    {
+        path: "manage-category",
+        component: ManageCategoryComponent
     },
     
     {
@@ -34,8 +50,19 @@ export const routes: Routes = [
         path: "login",
         component: LoginComponent
     },
+
+    {
+        path: "register",
+        component: SignupComponent
+    },
+    {
+        path: "adminNavbar",
+        component: AdminNavBarComponent
+    },
+
     {
         path: "**",
-        redirectTo: "dashboard"
+        redirectTo: "dashboard",
+        // component:NavBarComponent
     }
 ];
