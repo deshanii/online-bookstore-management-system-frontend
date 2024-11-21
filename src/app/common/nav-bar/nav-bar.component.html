@@ -11,15 +11,16 @@
 
   <div class="nav-bar">
     <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
-      <li><a href="#" class="nav-link px-2 link-dark" routerLink="dashboard">Home</a></li>
+      <li><a href="#" class="nav-link px-2 link-dark" routerLink="">Home</a></li>
       <li><a href="#" class="nav-link px-2 link-dark" routerLink="about-us">About US</a></li>
-      <li><a href="#" class="nav-link px-2 link-dark" routerLink ="contact">Contact</a></li>
+      <li><a href="#" class="nav-link px-2 link-dark" routerLink="contact">Contact</a></li>
+      
       
     </ul>
   </div>
 
   <div class="col-md-3 text-end me-5">
-    <button type="button" class="btn btn-outline-primary me-2"  data-bs-toggle="modal" data-bs-target="#exampleModal" [routerLink]="['/login']">Login</button>
-    <button type="button" class="btn btn-primary"  data-bs-toggle="modal" data-bs-target="#exampleModal" [routerLink]="['/register']">Sign-up</button>
+    <button type="button" class="btn btn-outline-primary me-2" [routerLink]="['/login']">Login</button>
+    <button type="button" class="btn btn-primary" [routerLink]="['/register']">Sign-up</button>
   </div>
 </header>

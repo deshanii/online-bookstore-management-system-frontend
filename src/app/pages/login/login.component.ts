@@ -2,12 +2,13 @@ import { CommonModule } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { Router } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
+import { NavBarComponent } from '../../common/nav-bar/nav-bar.component';
 
 @Component({
   selector: 'app-login',
   standalone: true,
-  imports: [FormsModule,CommonModule],
+  imports: [FormsModule,CommonModule,NavBarComponent,RouterLink],
   templateUrl: './login.component.html',
   styleUrl: './login.component.css'
 })
@@ -34,7 +35,7 @@ export class LoginComponent {
         alert("Email does not exit");
 
       }else if(resultData.message == "Login Success!"){
-        this.router.navigateByUrl('/adminNavbar');
+        this.router.navigateByUrl('/admin-main/admin-dashboard');
 
       }else{
         alert("Incorrect Email and Password not match");

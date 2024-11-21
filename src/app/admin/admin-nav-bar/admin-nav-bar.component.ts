@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { RouterLink } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-admin-nav-bar',
@@ -10,4 +10,10 @@ import { RouterLink } from '@angular/router';
 })
 export class AdminNavBarComponent {
 
+  constructor(private router: Router) {}
+
+  signOut(){
+    //this.userService.setUser(null);
+    this.router.navigate(['']);
+  }
 }

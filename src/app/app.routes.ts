@@ -10,27 +10,16 @@ import { AdminNavBarComponent } from './admin/admin-nav-bar/admin-nav-bar.compon
 import { NavBarComponent } from './common/nav-bar/nav-bar.component';
 import { AddCategoryComponent } from './admin/add-category/add-category.component';
 import { ManageCategoryComponent } from './admin/manage-category/manage-category.component';
+import { AdminMainComponent } from './admin/admin-main/admin-main.component';
+import { AdminDashboardComponent } from './admin/admin-dashboard/admin-dashboard.component';
+import { UserMainComponent } from './user/user-main/user-main.component';
+import { UserDashboardComponent } from './user/user-dashboard/user-dashboard.component';
+import { UserProfileComponent } from './user/user-profile/user-profile.component';
 
 export const routes: Routes = [
-   
     {
-        path: "add-book",
-        component: AddBooksComponent
-    },
-
-
-    {
-        path: "manage-book",
-        component: ManageBooksComponent
-    },
-    {
-        path: "add-category",
-        component: AddCategoryComponent
-    },
-
-    {
-        path: "manage-category",
-        component: ManageCategoryComponent
+        path: '',
+        component: DashboardComponent
     },
     
     {
@@ -39,37 +28,105 @@ export const routes: Routes = [
     },
     {
         path: "about-us",
-        component: AboutUsComponent
+        component: AboutUsComponent 
     },
-    {
-        path: "dashboard",
-        component: DashboardComponent
-    },
-    
     {
         path: "login",
         component: LoginComponent
     },
-
     {
         path: "register",
         component: SignupComponent
     },
+
     {
-        path: "adminNavbar",
-        component: AdminNavBarComponent
+        path:"admin-main",
+        component: AdminMainComponent,
+        children:[
+            {
+                path: "admin-dashboard",
+                component: AdminDashboardComponent
+            },
+            {
+                path: "add-book",
+                component: AddBooksComponent
+            },
+            {
+                path: "manage-book",
+                component: ManageBooksComponent
+            },
+
+        
+        ]
+    },
+    {
+        path:"user-main",
+        component: UserMainComponent,
+        children:[
+            {
+                path: "user-dashboard",
+                component: UserDashboardComponent
+            },
+            {
+                path: "user-profile",
+                component: UserProfileComponent
+            }
+
+        
+        ]
     },
 
-    {
-        path: "navbar",
-        component: NavBarComponent
-    },
+
+   
+    // {
+    //     path: "add-book",
+    //     component: AddBooksComponent
+    // },
+
+
+    // {
+    //     path: "manage-book",
+    //     component: ManageBooksComponent
+    // },
+    // {
+    //     path: "add-category",
+    //     component: AddCategoryComponent
+    // },
+
+    // {
+    //     path: "manage-category",
+    //     component: ManageCategoryComponent
+    // },
+    
+    // {
+    //     path: "contact",
+    //     component: ContactComponent
+    // },
+    // {
+    //     path: "about-us",
+    //     component: AboutUsComponent
+    // },
+    // {
+    //     path: "",
+    //     component: DashboardComponent
+    // },
+    
+    // {
+    //     path: "login",
+    //     component: LoginComponent
+    // },
+
+    // {
+    //     path: "register",
+    //     component: SignupComponent
+    // },
+    
 
 
 
-    {
-        path: "**",
-        redirectTo: "dashboard",
+    // {
+    //     path: "**",
+    //     redirectTo: "dashboard",
         // component:NavBarComponent
-    }
+    //}
 ];

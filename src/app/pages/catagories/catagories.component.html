@@ -1,86 +1,55 @@
-<br>
-<br>
 <div class="container">
   <div class="catagories">
-  <h1>All Books</h1>
-</div>
+    <h1>All Books</h1>
+  </div>
   <br>
   <div class="row row-cols-1 row-cols-md-3 g-4">
-    <div class="col">
+    <div class="col" *ngFor="let book of bookList">
       <div class="card h-100">
-        <img
-          src="https://images.pexels.com/photos/256455/pexels-photo-256455.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-          class="card-img-top" height="300" width="50" alt="...">
+        <div class="campaign-image"
+          [style.backgroundImage]="book.profileImagePath ? 'url(' + book.profileImagePath + ')' : 'url(assets/default-book.jpg)'">
+          <img
+            [src]="book.profileImagePath"
+            class="card-img-top"
+            height="350"
+            alt="Book image"
+          >
+        </div>
         <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
-            content. This content is a little bit longer.</p>
+          <h5 class="card-title">{{ book.title }}</h5>
+          <p class="card-text">{{ book.description }}</p>
+          <p>Category: {{ book.category }}</p>
+          <p>Author: {{ book.author }}</p>
+          <p>Price: {{ book.price }}</p>
+          <p>Quantity: {{ book.qty }}</p>
+          <button type="button" class="btn btn-danger" (click)="openDetails(book)">View Details</button>
         </div>
       </div>
     </div>
-    <div class="col">
-      <div class="card h-100">
-        <img
-          src="https://images.pexels.com/photos/256455/pexels-photo-256455.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-          class="card-img-top" height="300" width="50" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+  </div>
+
+  <div class="modal" tabindex="-1" role="dialog" [ngClass]="{'show': selectedBook}" [style.display]="selectedBook ? 'block' : 'none'">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">{{ selectedBook?.title }}</h5>
+          <button type="button" class="close" (click)="closeDetails()">
+            <span class="close-icon">&times;</span>
+          </button>
         </div>
-      </div>
-    </div>
-    <div class="col">
-      <div class="card h-100">
-        <img
-          src="https://images.pexels.com/photos/256455/pexels-photo-256455.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-          class="card-img-top" height="300" width="50" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
-            content. This card has even longer content than the first to show that equal height action.</p>
-        </div>
-      </div>
-    </div>
-    <div class="col">
-      <div class="card h-100">
-        <img
-          src="https://images.pexels.com/photos/256455/pexels-photo-256455.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-          class="card-img-top" height="300" width="50" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
-            content. This card has even longer content than the first to show that equal height action.</p>
-        </div>
-      </div>
-    </div>
-    <div class="col">
-      <div class="card h-100">
-        <img
-          src="https://images.pexels.com/photos/256455/pexels-photo-256455.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-          class="card-img-top" height="300" width="50" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
-            content. This card has even longer content than the first to show that equal height action.</p>
-        </div>
-      </div>
-    </div>
-    <div class="col">
-      <div class="card h-100">
-        <img
-          src="https://images.pexels.com/photos/256455/pexels-photo-256455.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-          class="card-img-top" height="300" width="50" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
-            content. This card has even longer content than the first to show that equal height action.</p>
+        <div class="modal-body">
+          <div class="modal-image">
+            <img [src]="selectedBook?.profileImagePath" class="img-fluid" alt="Book image">
+          </div>
+          <div class="modal-details">
+            <p><strong>Description:</strong> {{ selectedBook?.description }}</p>
+            <p><strong>Category:</strong> {{ selectedBook?.category }}</p>
+            <p><strong>Author:</strong> {{ selectedBook?.author }}</p>
+            <p><strong>Price:</strong> {{ selectedBook?.price }}</p>
+            <p><strong>Quantity:</strong> {{ selectedBook?.qty }}</p>
+          </div>
         </div>
       </div>
     </div>
   </div>
 </div>
-
-
-
-
-
