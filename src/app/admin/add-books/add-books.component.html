@@ -1,55 +1,66 @@
+<br>
+<!-- <div class="modal-dialog modal-xl ">
+    <div class="modal-content"> -->
 
-    <br>
-    <br>
-    <div class="modal-dialog modal-xl ">
-        <div class="modal-content">
 
-        
-            <div class="modal-body d-flex flex-wrap">
-                <!-- Form Section -->
-                <div class="form-section flex-grow-1 p-3">
-                    <form>
-                        <h1 class="text-center p-2">Add Books</h1>
-                        <div class="mb-3">
-                            <label for="book-name" class="col-form-label">Book Name:</label>
-                            <input type="text" class="form-control" id="book-name" placeholder="Enter Your Book Name" [(ngModel)]="book.title" name="title">
+        <div class="modal-body d-flex flex-wrap">
+            <div class="form-section flex-grow-1 p-3">
+                <form>
+                    <h1 class="text-center p-2">Add Books</h1>
+
+                    <div class="mb-3">
+                        <label for="book-image" class="col-form-label">Book Image:</label>
+                        <input type="file" class="form-control" id="book-image" (change)="onFileSelected($event)">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="book-name" class="col-form-label">Book Name:</label>
+                        <input type="text" class="form-control" id="book-name" placeholder="Enter Your Book Name"
+                            [(ngModel)]="book.title" name="title">
+                    </div>
+
+                    <div class="mb-3 d-flex">
+                        <div class="me-3 flex-grow-1">
+                            <label for="book-price" class="col-form-label">Book Category:</label>
+                            <input type="text" class="form-control" id="book-price" placeholder="Category"
+                                [(ngModel)]="book.category" name="category">
                         </div>
-                        
-                        <div class="mb-3 d-flex">
-                            <div class="me-3 flex-grow-1">
-                                <label for="book-price" class="col-form-label">Book Category:</label>
-                                <input type="text" class="form-control" id="book-price" placeholder="Category" [(ngModel)]="book.category" name="category">
-                            </div>
-                            <div class="flex-grow-1">
-                                <label for="book-price" class="col-form-label">Book Price:</label>
-                                <input type="text" class="form-control" id="book-price" placeholder="Price" [(ngModel)]="book.price" name="price">
-                            </div>
+                        <div class="flex-grow-1">
+                            <label for="book-price" class="col-form-label">Book Price:</label>
+                            <input type="text" class="form-control" id="book-price" placeholder="Price"
+                                [(ngModel)]="book.price" name="price">
                         </div>
-                        <div class="mb-3">
-                            <label for="book-author" class="col-form-label">Book Author:</label>
-                            <input type="text" class="form-control" id="book-author" placeholder="Enter Your Book Author" [(ngModel)]="book.author" name="author">
-                        </div>
-                        <div class="mb-3">
-                            <label for="book-description" class="col-form-label">Book Description:</label>
-                            <textarea class="form-control" id="book-description" placeholder="Description" [(ngModel)]="book.description" name="description"></textarea>
-                        </div>
-                    </form>
-                </div>
-                
-                <!-- Image Section -->
-                <div class="image-section">
-                    <img src="https://img.freepik.com/premium-photo/3d-person-pushing-shopping-cart-with-books-white-background_476612-10151.jpg?w=996" 
-                         alt="Book Image" class="rounded"  height="500">
-                </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="book-author" class="col-form-label">Book Author:</label>
+                        <input type="text" class="form-control" id="book-author" placeholder="Enter Your Book Author"
+                            [(ngModel)]="book.author" name="author">
+                    </div>
+                    <div class="mb-3">
+                        <label for="book-description" class="col-form-label">Book Description:</label>
+                        <textarea class="form-control" id="book-description" placeholder="Description"
+                            [(ngModel)]="book.description" name="description"></textarea>
+                    </div>
+                    <div class="mb-3">
+                        <label for="book-qty" class="col-form-label">Quantity:</label>
+                        <input type="number" class="form-control" id="book-qty" placeholder="Enter Quantity"
+                            [(ngModel)]="book.qty" name="qty">
+                    </div>
+                </form>
             </div>
-            
+
+            <div class="image-section">
+                <img src="https://img.freepik.com/premium-photo/3d-person-pushing-shopping-cart-with-books-white-background_476612-10151.jpg?w=996"
+                    alt="Book Image" class="rounded" height="500">
+            </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-success" (click)="addBook()">Add Book</button>
             </div>
         </div>
 
-    </div>
-    
+        <!-- <div class="modal-footer">
+            <button type="button" class="btn btn-success" (click)="addBook()">Add Book</button>
+        </div> -->
+    <!-- </div>
 
-
-
+</div> -->

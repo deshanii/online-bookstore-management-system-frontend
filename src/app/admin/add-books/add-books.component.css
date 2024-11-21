@@ -1,8 +1,29 @@
 .modal-body{
     background-color: #d9cfc6 ;
+    display: flex;
+}
+
+.form-section {
+    flex: 1;
+}
+
+.image-section {
+    flex: 0 0 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-section img {
+    max-width: 100%;
+    height: auto;
 }
 
 .form-section h1{
     background-color: #edc098;
 }
 
+.modal-footer btn{
+   top: 1500px;
+
+}

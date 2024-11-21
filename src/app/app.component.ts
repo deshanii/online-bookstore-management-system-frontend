@@ -13,6 +13,7 @@ import { AdminNavBarComponent } from './admin/admin-nav-bar/admin-nav-bar.compon
 import { SignupComponent } from './pages/signup/signup.component';
 import { AddCategoryComponent } from './admin/add-category/add-category.component';
 import { ManageCategoryComponent } from './admin/manage-category/manage-category.component';
+import { SearchBarComponent } from './pages/search-bar/search-bar.component';
 
 @Component({
   selector: 'app-root',
@@ -31,7 +32,8 @@ import { ManageCategoryComponent } from './admin/manage-category/manage-category
     AdminNavBarComponent,
     SignupComponent,
     AddCategoryComponent,
-    ManageCategoryComponent
+    ManageCategoryComponent,
+    SearchBarComponent
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'

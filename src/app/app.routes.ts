@@ -61,6 +61,13 @@ export const routes: Routes = [
     },
 
     {
+        path: "navbar",
+        component: NavBarComponent
+    },
+
+
+
+    {
         path: "**",
         redirectTo: "dashboard",
         // component:NavBarComponent

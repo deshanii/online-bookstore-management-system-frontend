@@ -3,11 +3,12 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import Swal from 'sweetalert2';
+import { SearchBarComponent } from '../../pages/search-bar/search-bar.component';
 
 @Component({
   selector: 'app-manage-books',
   standalone: true,
-  imports: [FormsModule, CommonModule, HttpClientModule],
+  imports: [FormsModule, CommonModule, HttpClientModule,SearchBarComponent],
   templateUrl: './manage-books.component.html',
   styleUrls: ['./manage-books.component.css'] // Changed styleUrl to styleUrls
 })
