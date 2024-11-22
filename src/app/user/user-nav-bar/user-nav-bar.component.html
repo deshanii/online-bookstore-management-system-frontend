@@ -1,6 +1,6 @@
 
 <header
-  class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3  border-bottom nav">
+  class="nav d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3  border-bottom nav">
   <div class="col-md-3 mb-2 mb-md-0">
     <a href="/" class="d-inline-flex link-body-emphasis text-decoration-none">
       <img class="logo" width="80px" height="" role="img" aria-label="Bootstrap" src="Bookstore.png">
@@ -10,17 +10,16 @@
   <div class="nav-bar">
     <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
       <!-- <li><a href="#" class="nav-link px-2 link-dark" routerLink="dashboard">Home |</a></li> -->
-      <li><a href="#" class="nav-link px-2 link-dark" routerLink="user-main/user-dashboard">Dashboard |</a></li>
-      <li><a href="#" class="nav-link px-2 link-dark" routerLink="about-us">About US |</a></li>
-      <li><a href="#" class="nav-link px-2 link-dark" routerLink="orders">Orders |</a></li>
-      <li><a href="#" class="nav-link px-2 link-dark" routerLink="user-main/user-profile">Profile |</a></li>
-       
-      
+      <li><a class="nav-link px-2 link-dark" routerLink="/user-main/user-dashboard">Dashboard |</a></li>
+      <li><a class="nav-link px-2 link-dark" routerLink="orders">Orders |</a></li>
+      <li><a class="nav-link px-2 link-dark" routerLink="user-main/user-profile">Profile |</a></li>
+      <li><a class="nav-link px-2 link-dark" href="user-main/user-about-us">About US |</a></li>
+      <li><a class="nav-link px-2 link-dark" href="user-main/user-contact-us">Contact US |</a></li>
     </ul>
   </div>
 
   <div class="col-md-3 text-end me-5">
-    <button type="button" class="btn btn-outline-primary me-2"  data-bs-toggle="modal" data-bs-target="#exampleModal" >Log Out</button>
+    <button type="button" class="btn btn-outline-primary me-2" (click)="signOut()">Log Out</button>
     
   </div>
 </header>

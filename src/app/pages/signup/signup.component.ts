@@ -4,11 +4,12 @@ import { FormsModule } from '@angular/forms';
 import { response } from 'express';
 import Swal from 'sweetalert2';
 import { NavBarComponent } from '../../common/nav-bar/nav-bar.component';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-signup',
   standalone: true,
-  imports: [FormsModule,NavBarComponent],
+  imports: [FormsModule,NavBarComponent,RouterLink],
   templateUrl: './signup.component.html',
   styleUrl: './signup.component.css'
 })
@@ -27,7 +28,7 @@ export class SignupComponent {
       "email" : this.email,
       "password" : this.password
     };
-    this.http.post("http://localhost:8080/admin/save",bodyData,{responseType : 'text'}).subscribe((resultData: any)=>{
+    this.http.post("http://localhost:8080/user/save",bodyData,{responseType : 'text'}).subscribe((resultData: any)=>{
       console.log(resultData);
       Swal.fire({
         title: "Registered Successfully!",

@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormsModule, NgModel } from '@angular/forms';
 import { RouterLink } from '@angular/router';
+import Swal from 'sweetalert2';
 
 interface Book {
   bookId: number;
@@ -107,7 +108,15 @@ export class UserDashboardComponent implements OnInit{
       console.log(`Added ${qty} of ${book.title} to cart.`);
       this.closeCartModal();
     } else {
-      alert('Invalid quantity! Please enter a value between 1 and the available quantity.');
+      // alert('Invalid quantity! Please enter a value between 1 and the available quantity.');
+
+      Swal.fire({
+        icon: "error",
+        title: "Invalid Quantity!",
+        text: "Please enter a value between 1 and the available quantity.",
+        
+      });
+
     }
   }
 
@@ -155,54 +164,38 @@ export class UserDashboardComponent implements OnInit{
   }
   
   placeOrder() {
-    const orderItems: OrderItem[] = [];
-
-    console.log(this.cart);
-    
+    const orderItems: OrderItem[] = []; 
   
     for (const item of this.cart) {
       this.http.get<Book>(`http://localhost:8080/book/search-by-id/${item.book.bookId}`).subscribe({
-        next: (bookDetails) => {
+        next: (bookDetails) => {         
           const orderItem: OrderItem = {
             book: bookDetails, 
             quantity: item.quantity,
             price: bookDetails.price,  
             subtotal: bookDetails.price * item.quantity
-          };
-
-          console.log(bookDetails);
-          console.log(orderItem);
-          
-  
+          };        
           orderItems.push(orderItem);
-
-
-  
           if (orderItems.length === this.cart.length) {
             const order: Order = {
               date: "2024-11-21",
               orderItems: orderItems,
               total: this.calculateTotalForPlaceOrder(orderItems) 
-            };
-  
-            console.log(order);
-  
+            };  
+            
             this.http.post('http://localhost:8080/order/add-order', order).subscribe({
-              next: (response) => {
-                console.log('Order placed successfully:', response);
+              next: (response) => {                
                 this.clearCart(); 
                 alert('Order placed successfully!');
                 this.closePlaceOrderModal();
               },
-              error: (error) => {
-                console.error('Error placing order:', error);
+              error: (error) => {                
                 alert('Failed to place the order. Please try again.');
               }
             });
           }
         },
         error: (error) => {
-          console.error('Error fetching book details:', error);
           alert('Failed to fetch book details. Please try again.');
         }
       });

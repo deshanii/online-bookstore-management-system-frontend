@@ -21,7 +21,7 @@
                   <p class="mb-0"><strong>Author:</strong> {{ book.author }}</p>
                   <p class="mb-0"><strong>Price:</strong> ${{ book.price }}</p>
                 </div>
-                <button type="button" class="btn btn-primary mt-3" (click)="openCartModal(book)">
+                <button type="button" class="btn btn-success mt-3" (click)="openCartModal(book)">
                   Add to Cart
                 </button>
               </div>
@@ -60,8 +60,8 @@
     <div class="modal fade" tabindex="-1" role="dialog" [class.show]="selectedBook" [style.display]="selectedBook ? 'block' : 'none'" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
-          <div class="modal-header bg-primary text-white">
-            <h5 class="modal-title mx-auto">{{ selectedBook?.title }}</h5>
+          <div class="modal-header  text-white">
+            <h5 class="modal-title ">{{ selectedBook?.title }}</h5>
             <button type="button" class="btn-close text-white" aria-label="Close" (click)="closeCartModal()"></button>
           </div>
           <div class="modal-body">

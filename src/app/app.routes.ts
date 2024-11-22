@@ -15,20 +15,30 @@ import { AdminDashboardComponent } from './admin/admin-dashboard/admin-dashboard
 import { UserMainComponent } from './user/user-main/user-main.component';
 import { UserDashboardComponent } from './user/user-dashboard/user-dashboard.component';
 import { UserProfileComponent } from './user/user-profile/user-profile.component';
+import { UserAboutUsComponent } from './user/user-about-us/user-about-us.component';
+import path from 'path';
+import { HomeComponent } from './pages/home/home.component';
+import { UserContactUsComponent } from './user/user-contact-us/user-contact-us.component';
 
 export const routes: Routes = [
     {
         path: '',
-        component: DashboardComponent
-    },
-    
-    {
-        path: "contact",
-        component: ContactComponent
-    },
-    {
-        path: "about-us",
-        component: AboutUsComponent 
+        component: DashboardComponent,
+        children:[
+            {
+                path:'',
+                component: HomeComponent
+            },
+            {
+                path: "contact",
+                component: ContactComponent
+            },
+            {
+                path: "about-us",
+                component: AboutUsComponent 
+            },
+
+        ]
     },
     {
         path: "login",
@@ -70,8 +80,15 @@ export const routes: Routes = [
             {
                 path: "user-profile",
                 component: UserProfileComponent
+            },
+            {
+                path: "user-about-us",
+                component: UserAboutUsComponent
+            },
+            {
+                path: "user-contact-us",
+                component: UserContactUsComponent
             }
-
         
         ]
     },
