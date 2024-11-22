@@ -1,1 +1,111 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f7fa;
+}
 
+h3.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #2c3e50;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    font-weight: 700;
+}
+
+.accordion {
+    max-width: 700px;
+    margin: 0 auto;
+    background: #ffffff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.accordion-item {
+    border-bottom: 1px solid #ddd;
+    overflow: hidden;
+}
+
+.accordion-item:last-child {
+    border-bottom: none;
+}
+
+.accordion-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 25px;
+    background: #2c3e50;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 1.2rem;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.accordion-title:hover {
+    background: #34495e;
+}
+
+.accordion-title .icon-angle-down {
+    font-size: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+.accordion-title[aria-expanded="true"] .icon-angle-down {
+    transform: rotate(180deg);
+}
+
+.accordion-inner {
+    max-height: 0;
+    padding: 0 25px;
+    background: #f9f9f9;
+    color: #333;
+    font-size: 1rem;
+    line-height: 1.6;
+    overflow: hidden;
+    transition: max-height 0.4s ease, padding 0.3s ease;
+}
+
+.accordion-inner p {
+    margin: 15px 0;
+}
+
+.accordion-inner a {
+    color: #2980b9;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.accordion-inner a:hover {
+    color: #1abc9c;
+}
+
+
+.accordion-item[aria-expanded="true"] .accordion-inner {
+    max-height: 200px; 
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+@media screen and (max-width: 768px) {
+    .accordion {
+        margin: 20px;
+    }
+
+    h3.section-title {
+        font-size: 1.8rem;
+    }
+
+    .accordion-title {
+        font-size: 1rem;
+        padding: 15px 20px;
+    }
+
+    .accordion-inner {
+        padding: 10px 20px;
+    }
+}

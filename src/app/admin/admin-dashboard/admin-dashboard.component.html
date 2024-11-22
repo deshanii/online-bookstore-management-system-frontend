@@ -1,1 +1,125 @@
-<app-catagories></app-catagories>
+<div class="container-fluid mt-4">
+    <div class="row mb-4">
+        <div class="col">
+            <h2 class="text-primary"><i class="fas fa-book"></i> Welcome Admin !</h2>
+        </div>
+    </div>
+
+    <div class="row mb-4">
+        <div class="col-md-3">
+            <div class="card bg-primary text-white">
+                <div class="card-body">
+                    <h5 class="card-title">Total Books</h5>
+                    <h2 class="card-text">150</h2>
+                    <small>Available books in inventory</small>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card bg-success text-white">
+                <div class="card-body">
+                    <h5 class="card-title">New Orders</h5>
+                    <h2 class="card-text">25</h2>
+                    <small>New orders today</small>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card bg-warning text-dark">
+                <div class="card-body">
+                    <h5 class="card-title">Pending Requests</h5>
+                    <h2 class="card-text">8</h2>
+                    <small>Awaiting approval</small>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card bg-danger text-white">
+                <div class="card-body">
+                    <h5 class="card-title">Critical Stock</h5>
+                    <h2 class="card-text">2</h2>
+                    <small>Books running low</small>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mb-4">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="mb-0">Book Inventory Status</h5>
+                </div>
+                <div class="card-body">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th>Book Title</th>
+                                <th>Available Units</th>
+                                <th>Status</th>
+                                <th>Last Updated</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Book Title 1</td>
+                                <td>85</td>
+                                <td><span class="badge bg-success">Normal</span></td>
+                                <td>2024-03-20 10:30</td>
+                            </tr>
+                            <tr>
+                                <td>Book Title 2</td>
+                                <td>25</td>
+                                <td><span class="badge bg-warning">Low</span></td>
+                                <td>2024-03-20 11:15</td>
+                            </tr>
+                            <tr>
+                                <td>Book Title 3</td>
+                                <td>65</td>
+                                <td><span class="badge bg-success">Normal</span></td>
+                                <td>2024-03-20 09:30</td>
+                            </tr>
+                            <tr>
+                                <td>Book Title 4</td>
+                                <td>18</td>
+                                <td><span class="badge bg-warning">Low</span></td>
+                                <td>2024-03-20 12:45</td>
+                            </tr>
+                            <tr>
+                                <td>Book Title 5</td>
+                                <td>18</td>
+                                <td><span class="badge bg-warning">Low</span></td>
+                                <td>2024-03-20 12:45</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="mb-0">Recent Activities</h5>
+                </div>
+                <div class="card-body">
+                    <div class="activity-feed">
+                        <div class="alert alert-info">
+                            <small class="text-muted">10 mins ago</small>
+                            <p class="mb-0">New book added - Title 1</p>
+                        </div>
+                        <div class="alert alert-warning">
+                            <small class="text-muted">30 mins ago</small>
+                            <p class="mb-0">Order #1234 has been shipped.</p>
+                        </div>
+                        <div class="alert alert-warning">
+                            <small class="text-muted">30 mins ago</small>
+                            <p class="mb-0">Order #1234 has been shipped.</p>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

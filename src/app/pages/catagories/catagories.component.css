@@ -84,3 +84,16 @@
   .btn-danger:hover {
     background-color: #c82333;
   }
+
+  .card-body{
+     background-color: #d9cfc6;
+
+  }
+
+  .modal-header{
+    background-color: #ad8059;
+  }
+
+  .modal-body{
+    background-color: #d9cfc6;
+  }
